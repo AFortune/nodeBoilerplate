@@ -1,0 +1,21 @@
+{
+  "name": "Node Boilerplate",
+  "version": "0.1.3",
+  "description": "",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node serve"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrianDGLS/Node-Boilerplate"
+  },
+  "keywords": [
+    "node",
+    "heroku"
+  ],
+  "license": "MIT"
+}
