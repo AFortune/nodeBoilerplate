@@ -7,7 +7,7 @@
     "start": "node serve"
   },
   "engines": {
-    "node": "0.12.2"
+    "node": "0.10.26"
   },
   "repository": {
     "type": "git",
