@@ -1,2 +1,7 @@
 .idea
 .sln
+*.sln
+.sln/
+.settings/
+.settings
+.vs
