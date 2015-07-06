@@ -1,13 +1,18 @@
 //Require files system
 var fs = require('fs');
 
+
 function merge(values, content) {
     //Find where to add values in view
-    for (var key in values)
-        content = content.replace('{{' + key + '}}', values[key]);
+    for (var key in values) {
+        if (key) {
+            content = content.replace('{{' + key + '}}', values[key]);
+        }
+    }
 
     return content;
 }
+
 
 //Merge our values into the view
 function view(templateName, values, response) {

@@ -11,8 +11,3 @@ Simple templating using curly braces
 Serves static files  
 Simple top level structure  
 Easy routing  
-
-
-#### Works with Node version 0.10.26 or lower
-
-Working on support for later node versions  
