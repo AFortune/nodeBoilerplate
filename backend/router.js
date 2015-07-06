@@ -1,39 +1,22 @@
 var path = require('path');
 var fs = require('fs');
 
+//Determine MIME types to use for different file extensions
+var mimeTypes = require('./mime-types.js');
 
 //Require the template renderer
 var renderer = require('./render.js');
+
 
 //Serve static files
 function assets(request, response) {
 	//Give a path for static files
 	var filePath = './' + request.url;
 
-	//We need to change the contentType as we don't want to render the css or js as html
-	var extname = path.extname(filePath);
+	//Determine the correct contentType to use
+	var extname = path.extname(filePath).toLowerCase();
 	var contentType = 'text/html';
-	//This acts as a mini MIME
-	switch (extname.toLowerCase()) {
-	case '.js':
-		contentType = 'text/javascript';
-		break;
-	case '.css':
-		contentType = 'text/css';
-		break;
-	case '.html':
-		contentType = 'text/html';
-		break;
-	case '.png':
-		contentType = 'image/png';
-		break;
-	case '.gif':
-		contentType = 'image/gif';
-		break;
-	case '.jpg':
-		contentType = 'image/jpeg';
-		break;
-	}
+	if (mimeTypes[extname]) contentType = mimeTypes[extname];
 
 	//Handle what to do if path does or does not exist
 	fs.exists(filePath, function (exists) {
