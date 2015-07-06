@@ -95,7 +95,7 @@ The information should be passed to the templates via the routes _values_ variab
 If you are using a Unix machine then placing the following in your .bashrc will allow you to quickly clone into and reuse this boilerplate.  
 
         newNode (){
-          git pull git@github.com:BrianDGLS/nodeBoilerplate.git
+          git clone git@github.com:BrianDGLS/nodeBoilerplate.git
           cd nodeBoilerplate
           node serve
         }
