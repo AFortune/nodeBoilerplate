@@ -51,7 +51,7 @@ var header = {
 //Handle HTTP route GET '/' and POST '/'
 function home(request, response) {
     if (request.url === '/') {
-        if (request.method.toLowerCase() === "get") {
+        if (request.method.toLowerCase() === 'get') {
             //The values that will be passed to our views
             var values = {
                 title: 'Home',
