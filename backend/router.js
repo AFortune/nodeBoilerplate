@@ -15,10 +15,8 @@ function assets(request, response) {
 
     //Determine the correct contentType to use
     var extname = path.extname(filePath).toLowerCase();
-    var contentType = 'text/html';
-    if (mimeTypes[extname]) {
-        contentType = mimeTypes[extname];
-    }
+    var contentType = mimeTypes[extname] || 'text/html';
+    
 
     //Handle what to do if path does or does not exist
     fs.exists(filePath, function(exists) {
